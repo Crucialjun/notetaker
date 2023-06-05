@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1052631217509",
+    "project_id": "notetaker-335e3",
+    "storage_bucket": "notetaker-335e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052631217509:android:db57d8fa2e85552dee5d8c",
+        "android_client_info": {
+          "package_name": "com.crucialtech.notetaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052631217509-92k72p92bv46jgjt09ln8td7aer2ffp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIs9hRjehgGsh1Bq33XcOZ7hgBzvOZGIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052631217509-92k72p92bv46jgjt09ln8td7aer2ffp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
