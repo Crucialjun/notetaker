@@ -49,14 +49,12 @@ class _HomePageState extends State<HomePage> {
             TextField(
               decoration: const InputDecoration(
                 hintText: "Please enter your Email",
-                labelText: "Email",
               ),
               controller: _emailController,
             ),
             TextField(
               decoration: const InputDecoration(
                 hintText: "Please enter your Password",
-                labelText: "Password",
               ),
               controller: _passwordController,
             ),
