@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,18 +48,32 @@ class _HomePageState extends State<HomePage> {
         body: Column(
           children: [
             TextField(
+              keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
                 hintText: "Please enter your Email",
               ),
               controller: _emailController,
             ),
             TextField(
+              obscureText: true,
+              enableSuggestions: false,
+              autocorrect: false,
+              keyboardType: TextInputType.visiblePassword,
               decoration: const InputDecoration(
                 hintText: "Please enter your Password",
               ),
               controller: _passwordController,
             ),
-            TextButton(onPressed: () {}, child: const Text("Register")),
+            TextButton(
+                onPressed: () async {
+                  final email = _emailController.text;
+                  final password = _passwordController.text;
+
+                  final userCredential = await FirebaseAuth.instance
+                      .createUserWithEmailAndPassword(
+                          email: email, password: password);
+                },
+                child: const Text("Register")),
           ],
         ));
   }
