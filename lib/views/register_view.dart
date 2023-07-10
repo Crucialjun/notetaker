@@ -42,15 +42,17 @@ class _RegisterViewState extends State<RegisterView> {
           TextButton(
               onPressed: () {
                 try {
-                  FirebaseAuth.instance.signInWithEmailAndPassword(
+                  FirebaseAuth.instance.createUserWithEmailAndPassword(
                     email: _emailController.text,
                     password: _passwordController.text,
                   );
                 } on FirebaseAuthException catch (e) {
-                  if (e.code == 'user-not-found') {
-                    print('No user found for that email.');
+                  if (e.code == 'weak-password') {
+                    print('Weak Password');
                   } else if (e.code == 'wrong-password') {
                     print('Wrong password provided for that user.');
+                  } else if (e.code == 'email-already-in-use') {
+                    print('Email already in use');
                   }
                 } catch (e) {
                   print(e);
