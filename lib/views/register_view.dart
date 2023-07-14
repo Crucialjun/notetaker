@@ -53,6 +53,8 @@ class _RegisterViewState extends State<RegisterView> {
                     print('Wrong password provided for that user.');
                   } else if (e.code == 'email-already-in-use') {
                     print('Email already in use');
+                  }else if (e.code == 'invalid-email') {
+                    print('Invalid Email');
                   }
                 } catch (e) {
                   print(e);
